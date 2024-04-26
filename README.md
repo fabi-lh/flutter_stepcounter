@@ -25,7 +25,6 @@ Before you begin, ensure you have Flutter installed on your development machine.
    ```bash
    flutter pub get
    ```
-   ```
 4. Run the app on your connected device or emulator:
    ```bash
    flutter run
