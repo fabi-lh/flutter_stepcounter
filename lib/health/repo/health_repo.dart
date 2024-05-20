@@ -14,4 +14,15 @@ class HealthRepository {
       return 0;
     }
   }
+
+  Future<bool> saveWorkout() async {
+    return await Health().writeWorkoutData(
+        activityType:
+            HealthWorkoutActivityType.HIGH_INTENSITY_INTERVAL_TRAINING,
+        start: DateTime.now().subtract(const Duration(minutes: 30)),
+        end: DateTime.now(),
+        title: "GYMKY WORKOUT - Sascha Huber - 30min HIIT",
+        totalEnergyBurned: 500,
+        totalEnergyBurnedUnit: HealthDataUnit.KILOCALORIE);
+  }
 }
